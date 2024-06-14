@@ -9,6 +9,10 @@ function Header() {
     setShowPopup(!showPopup);
   };
 
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <header className="absolute top-0 left-0 w-full bg-gradient-to-b from-black to-transparent p-4 z-10">
       <nav className="flex justify-center items-center space-x-6">
@@ -54,7 +58,24 @@ function Header() {
 
       {showPopup && (
         <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 flex justify-center items-center">
-          <div className="bg-white p-8 rounded shadow-lg max-w-sm">
+          <div className="bg-white p-8 rounded shadow-lg max-w-sm relative">
+            <button
+              onClick={closePopup}
+              className="absolute top-0 right-0 m-4 text-gray-700 hover:text-gray-900">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
             <h2 className="text-lg font-bold mb-4">Sign In</h2>
             <form>
               <div className="mb-4">

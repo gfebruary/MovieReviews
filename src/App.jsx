@@ -8,7 +8,7 @@ import Films from "./pages/Films";
 import Lists from "./pages/Lists";
 import Members from "./pages/Members";
 import Journal from "./pages/Journal";
-import Movie from "./pages/Movie";
+import MovieDetails from "./pages/MovieDetails";
 import "./App.css";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="movie/:id" element={<Movie />} />
+        <Route path="moviedetails/:id" element={<MovieDetails />} />
         <Route path="signin" element={<SignIn />} />
         <Route path="create-account" element={<CreateAccount />} />
         <Route path="films" element={<Films />} />

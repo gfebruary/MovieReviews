@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-const Movie = () => {
+const MovieDetails = () => {
   return <div>Movie Details</div>;
 };
 
-export default Movie;
+export default MovieDetails;
