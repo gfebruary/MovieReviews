@@ -40,9 +40,10 @@ function Home() {
     return <div>Error loading movies: {error.message}</div>;
   }
 
-  const firstMovie = movies[3];
+  const randomIndex = Math.floor(Math.random() * movies.length);
+  const randomMovie = movies[randomIndex];
   const backgroundImageUrl =
-    firstMovie?.fields?.backgroundImage?.fields?.file?.url;
+    randomMovie?.fields?.backgroundImage?.fields?.file?.url;
 
   return (
     <div className="flex flex-col h-screen">
