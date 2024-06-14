@@ -45,6 +45,14 @@ function Home() {
   const backgroundImageUrl =
     randomMovie?.fields?.backgroundImage?.fields?.file?.url;
 
+  const getRandomMovies = (count) => {
+    const randomMovies = [];
+    for (let i = 0; i < count; i++) {
+      const randomIndex = Math.floor(Math.random() * movies.length);
+      randomMovies.push(movies[randomIndex]);
+    }
+    return randomMovies;
+  };
   return (
     <div className="flex flex-col h-screen">
       <div
@@ -54,7 +62,22 @@ function Home() {
             ? `linear-gradient(to bottom, transparent, black), url(https:${backgroundImageUrl})`
             : "",
         }}></div>
-      <p className="text-white">TEXT</p>
+      <div className="main-selling-point text-center">
+        <p className="text-white text-3xl">Track films you’ve watched.</p>
+        <p className="text-white text-3xl">Save those you want to see.</p>
+        <p className="text-white text-3xl">Tell your friends what’s good.</p>
+      </div>
+
+      <div className="flex justify-center">
+        <button className="bg-green-700 hover:bg-green-800 text-white font-bold p-3 m-9 rounded">
+          Get Started - It's Free
+        </button>
+      </div>
+
+      <p className="text-gray-500 font-bold text-center">
+        The social network for film lovers.
+      </p>
+      <br />
     </div>
   );
 }
