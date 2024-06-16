@@ -1,35 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { createClient } from "contentful";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const spaceId = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
-const accessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
-
-const client = createClient({
-  space: spaceId,
-  accessToken: accessToken,
-});
-
-function Home() {
-  const [movies, setMovies] = useState([]);
+function Home({ movies }) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await client.getEntries({
-          content_type: "movie",
-        });
-        setMovies(response.items);
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error fetching movies:", error);
-        setError(error);
-        setIsLoading(false);
-      }
-    };
-
-    fetchMovies();
+    setIsLoading(false);
   }, []);
 
   if (isLoading) {
@@ -46,13 +23,19 @@ function Home() {
     randomMovie?.fields?.backgroundImage?.fields?.file?.url;
 
   const getRandomMovies = (count) => {
-    const randomMovies = [];
-    for (let i = 0; i < count; i++) {
-      const randomIndex = Math.floor(Math.random() * movies.length);
-      randomMovies.push(movies[randomIndex]);
+    const shuffledMovies = [...movies];
+    for (let i = shuffledMovies.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledMovies[i], shuffledMovies[j]] = [
+        shuffledMovies[j],
+        shuffledMovies[i],
+      ];
     }
-    return randomMovies;
+    return shuffledMovies.slice(0, count);
   };
+
+  const randomMovies = getRandomMovies(6);
+
   return (
     <div className="flex flex-col h-screen">
       <div
@@ -77,7 +60,28 @@ function Home() {
       <p className="text-gray-500 font-bold text-center">
         The social network for film lovers.
       </p>
-      <br />
+
+      <div className="flex justify-center mt-8">
+        {randomMovies.map((movie, index) => {
+          const coverImageUrl = movie?.fields?.poster?.fields?.file?.url;
+          console.log(`Movie ${index + 1}:`, movie);
+          return (
+            <div key={index} className="flex items-center justify-center p-4">
+              {coverImageUrl ? (
+                <Link to={`/movies/${movie.sys.id}`}>
+                  <img
+                    src={`https:${coverImageUrl}`}
+                    alt={`Movie Cover ${index + 1}`}
+                    className="h-48 w-auto"
+                  />
+                </Link>
+              ) : (
+                <div className="text-white">No Image Available</div>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
