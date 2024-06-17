@@ -10,6 +10,7 @@ import Lists from "./pages/Lists";
 import Members from "./pages/Members";
 import Journal from "./pages/Journal";
 import MovieDetails from "./pages/MovieDetails";
+
 import "./App.css";
 import { createClient } from "contentful";
 

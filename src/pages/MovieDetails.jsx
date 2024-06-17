@@ -27,6 +27,8 @@ const MovieDetails = ({ movies }) => {
     </li>
   ));
 
+  const trailerUrl = movie?.fields?.trailer?.fields?.file?.details?.url;
+
   return (
     <div className="flex flex-col h-screen">
       <div

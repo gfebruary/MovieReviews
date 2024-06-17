@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import HighlightBox from "../components/HighlightBox";
+import MainListSection from "../components/MainListSection";
 
 function Home({ movies }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,9 +39,9 @@ function Home({ movies }) {
   const randomMovies = getRandomMovies(6);
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col min-h-screen">
       <div
-        className="relative w-2/3 h-1/2 bg-cover bg-top mx-auto"
+        className="relative w-2/3 min-h-96 bg-cover bg-top mx-auto"
         style={{
           backgroundImage: backgroundImageUrl
             ? `linear-gradient(to bottom, transparent, black), url(https:${backgroundImageUrl})`
@@ -61,27 +63,40 @@ function Home({ movies }) {
         The social network for film lovers.
       </p>
 
-      <div className="flex justify-center mt-8">
-        {randomMovies.map((movie, index) => {
-          const coverImageUrl = movie?.fields?.poster?.fields?.file?.url;
-          console.log(`Movie ${index + 1}:`, movie);
-          return (
-            <div key={index} className="flex items-center justify-center p-4">
-              {coverImageUrl ? (
-                <Link to={`/movies/${movie.sys.id}`}>
-                  <img
-                    src={`https:${coverImageUrl}`}
-                    alt={`Movie Cover ${index + 1}`}
-                    className="h-48 w-auto"
-                  />
-                </Link>
-              ) : (
-                <div className="text-white">No Image Available</div>
-              )}
-            </div>
-          );
-        })}
+      <div className="flex-grow flex justify-center mt-8">
+        <div className="flex flex-wrap justify-center max-w-screen-lg">
+          {randomMovies.map((movie, index) => {
+            const coverImageUrl = movie?.fields?.poster?.fields?.file?.url;
+            console.log(`Movie ${index + 1}:`, movie);
+            return (
+              <div key={index} className="p-3">
+                {coverImageUrl ? (
+                  <Link to={`/movies/${movie.sys.id}`}>
+                    <img
+                      src={`https:${coverImageUrl}`}
+                      alt={`Movie Cover ${index + 1}`}
+                      className="h-48 w-auto"
+                      style={{
+                        transition: "box-shadow 0.1s ease-in-out",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.boxShadow = "0 0 0 3px rgb(85, 141, 1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.boxShadow = "none";
+                      }}
+                    />
+                  </Link>
+                ) : (
+                  <div className="text-white">No Image Available</div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
+      <HighlightBox />
+      <MainListSection />
     </div>
   );
 }

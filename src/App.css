@@ -8,3 +8,23 @@
 .main-selling-point {
   font-family: "Times New Roman", Times, serif;
 }
+
+.movie-details {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* footer {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+} */
+
+@media screen and (max-width: 1010px) {
+  .bg-cover {
+    width: 100vw;
+    margin: 0;
+  }
+}
