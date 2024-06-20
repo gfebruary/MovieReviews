@@ -1,0 +1,317 @@
+[
+  {
+    "movieID": 2,
+    "title": "Southpaw",
+    "release_date": "2015-06-13T00:00+02:00",
+    "director": "Antoine Fuqua",
+    "description": "After a fatal incident sends him on a rampant path of destruction, a champion boxer fights to get custody of his daughter and revive his professional career. ",
+    "genre": [
+      "Action",
+      "Drama",
+      "Sport"
+    ],
+    "actors": "Jake Gyllenhaal: Billy Hope\nRachel McAdams: Maureen Hope\nForest Whitaker: Tick Wills\nOona Laurence: Leila Hope\n50 Cent: Jordan Mains\nNaomie Harris: Angela Rivera\nSkylan Brooks: Hoppy\nVictor Ortiz: Ramone\nBeau Knapp: Jon Jon\nMiguel Gómez: Miguel „Magic“ Escobar\nDominic Colón: Mikey",
+    "rating": 5,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/7KhGEZQBH1xuJSN64xZH0u/d7bff3b57e8f2ebc94961accd925c7b9/southpaw.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/4YYdUnzZl3YuZtmtvMC0DZ/b63b0bef2133171e85da4d9fb2fe168c/700190.jpg"
+  },
+  {
+    "movieID": 1,
+    "title": "Borat",
+    "release_date": "2012-05-02T00:00+02:00",
+    "director": "\tLarry Charles",
+    "description": "Kazakh TV talking head Borat is dispatched to the United States to report on the greatest country in the world. ",
+    "genre": [
+      "Comedy"
+    ],
+    "actors": "Sacha Baron Cohen\nPeter Baynham\nAnthony Hines\nTodd Phillips",
+    "rating": 5,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/7cse32aCRFpdak2ImvtMu4/27fac8efaf127e6d829042e76c9b82bb/boratr-poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/tXWFD6XOxaESdeSTJuPcK/938df2b36a059be07cb9da53df17aab6/HT_borat_as_161014_16x9_1600.jpg"
+  },
+  {
+    "movieID": 3,
+    "title": "Hababam Sinifi",
+    "release_date": "1975-08-15T00:00+02:00",
+    "director": "Ertem Egilmez",
+    "description": "Lazy, uneducated students share a very close bond. They live together in the dormitory, where they plan their latest pranks. When a new headmaster arrives, the students naturally try to overthrow him. A comic war of nitwits follows. ",
+    "genre": [
+      "Comedy",
+      "Drama"
+    ],
+    "actors": "\tKemal Sunal\nMünir Özkul\nTarık Akan\nHalit Akçatepe\nAdile Naşit\nSıtkı Akçatepe\nAhmet Arıman\nAkil Öztuna\nMuharrem Gürses\nLeman Akçatepe",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/3yVXQFBUSgDHU7QOahCRow/e956a81292fc5ab863a20efc22923a35/habi-poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/1JvPFM7zz0H5PgEaIDGLzz/0684b63779169e91afe6dbbba8778cb0/HABABAM-SINIFI-SINIFTA-KALDI.jpg"
+  },
+  {
+    "movieID": 4,
+    "title": "Charlie and the Chocolate Factory",
+    "release_date": "2005-09-10T00:00+02:00",
+    "director": "Tim Burton",
+    "description": "Charlie, a young boy from an impoverished family, and four other kids win a tour of an amazing chocolate factory run by an imaginative chocolatier, Willy Wonka, and his staff of Oompa-Loompas. ",
+    "genre": [
+      "Adventure",
+      "Family",
+      "Comedy"
+    ],
+    "actors": "Johnny Depp\nFreddie Highmore\nDavid Kelly\nHelena Bonham Carter\nNoah Taylor\nMissi Pyle\nJames Fox\nDeep Roy\nChristopher Lee",
+    "rating": 5,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/1j36T2yi3baamSxiM3AjzL/b247793af7d34a589973f4903609fdfe/charlie_poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/1GvOIbhP4YyOq9cWqrr2Jp/174a71f6d588732785ffe3908b5ce10c/charlie.jpg"
+  },
+  {
+    "movieID": 5,
+    "title": "Flight",
+    "release_date": "2012-03-23T00:00+02:00",
+    "director": " Robert Zemeckis",
+    "description": "Troubling questions arise after airline pilot Whip Whitaker makes a miracle landing after a mid-air catastrophe.",
+    "genre": [
+      "Thriller",
+      "Drama"
+    ],
+    "actors": "Denzel Washington: William „Whip“ Whitaker\nKelly Reilly: Nicole\nDon Cheadle: Hugh Lang\nBruce Greenwood: Charlie Anderson\nJohn Goodman: Harling Mays\nBrian Geraghty: Ken Evans\nTamara Tunie: Margaret Thomason\nNadine Velazquez: Katerina Marquez\nMelissa Leo: Ellen Block\nRavi Kapoor: Dr. Kenan",
+    "rating": 5,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/4EqaZmLwu6CuEotSfbE5Wr/aa1f3f07c512534824ccda7dfa787840/flight-poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/6FSrr8m3Fo8U9ndxU6tAKf/77e5191c67ca915d92d0277fd372a120/4784062d589cc73a719dcd1df703ed4e.jpeg"
+  },
+  {
+    "movieID": 9,
+    "title": "District 9",
+    "release_date": "2009-08-16T00:00+02:00",
+    "director": "Neill Blomkamp",
+    "description": "Violence ensues after an extraterrestrial race forced to live in slum-like conditions on Earth finds a kindred spirit in a government agent exposed to their biotechnology. ",
+    "genre": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "actors": "Sharlto Copley\nJason Cope\nDavid James\nVanessa Haywood\nMandla Gaduka\nKenneth Nkosi\nEugene Khumbanyiwa\nLouis Minnaar\nWilliam Allen Young\nNathalie Boltt",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/3Kh9d1Zt5m1eudqQRK3y0U/4d2df9ef4aeb0ef016e9ac1ff99f2cf2/District9_Poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/5wHRDbRH4GAX9HEQ6zMFaM/d073bef6553fa1438e613b7ad7ae54b2/District9_Background.jpg"
+  },
+  {
+    "movieID": 12,
+    "title": "The Fall Guy",
+    "release_date": "2024-04-30T00:00+02:00",
+    "director": "David Leitch",
+    "description": "He's a stuntman, and like everyone in the stunt community, he gets blown up, shot, crashed, thrown through windows and dropped from the highest of heights, all for our entertainment. And now, fresh off an almost career-ending accident, this working-class hero has to track down a missing movie star, solve a conspiracy and try to win back the love of his life while still doing his day job. What could possibly go right? ",
+    "genre": [
+      "Comedy",
+      "Drama",
+      "Action"
+    ],
+    "actors": "Ryan Gosling\nEmily Blunt\nAaron Taylor-Johnson\nHannah Waddingham\nTeresa Palmer ",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/6o91pPe5O1B7Z00TZFf9X3/36c005d05cf8375bb933380133197630/the-fall-guy-863a48586518d2989ca3f99b79092db3_poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/3bisb3KYnNtV18CtNouN0z/38c4d49aca6deb8bb6cfb62c1dbb4987/fallguy-background.jpg"
+  },
+  {
+    "movieID": 104,
+    "title": "Shaitaan",
+    "release_date": "2024-03-08T00:00+02:00",
+    "director": "Vikas Bahl",
+    "description": "A family's getaway turns terrifying when an intruder possesses the teen daughter's body, putting her at the mercy of his increasingly sinister commands.",
+    "genre": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "actors": "Ajay Devgn. Kabir Rishi · Madhavan. Vanraj Kashyap · Jyotika. Jyoti Rishi · Janki Bodiwala.",
+    "rating": 3,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/1bcRE0TDKMf3v7NB2kyYCZ/9a705f70fe63eebab6d745bd655309d4/Screenshot_2024-05-29_at_4.02.46_PM.png",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/2BeaSaBHpTcIPV1Dkckn7b/fac8cb4f473ec612c582777accc6322f/Shaitaan-4.jpg"
+  },
+  {
+    "movieID": 103,
+    "title": "Tumbbad",
+    "release_date": "2018-10-12T00:00+02:00",
+    "director": "Rahi Anil Barve, Anand Gandhi",
+    "description": "A mythological story about a goddess who created the entire universe. The plot revolves around the consequences when humans build a temple for her first-born.",
+    "genre": [
+      "Drama",
+      "Fantasy",
+      "Horror"
+    ],
+    "actors": "Sohum Shah, Jyoti Malshe, Anita Date-Kelkar, Ronjini Chakraborty.",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/66T5JR8e5sZO1pEbAYJvGD/d4648a22d3457c0adf83c9975795f705/Screenshot_2024-05-29_at_3.54.28_PM.png",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/4WOCnd26papG9WbETrpTwq/f509eaa0ee09fd90049a916570653094/Screenshot_2024-05-29_at_3.55.06_PM.png"
+  },
+  {
+    "movieID": 102,
+    "title": "Padmaavat",
+    "release_date": "2018-01-25T00:00+02:00",
+    "director": "Sanjay Leela Bhansali",
+    "description": "Set in medieval Rajasthan, Queen Padmavati is married to a noble king and they live in a prosperous fortress with their subjects until an ambitious Sultan hears of Padmavati's beauty and forms an obsessive love for the Queen of Mewar.",
+    "genre": [
+      "Drama",
+      "History"
+    ],
+    "actors": "Deepika Padukone · Padmavati ; Shahid Kapoor · Ratan Singh ; Ranveer Singh · Alauddin Khilji ; Aditi Rao Hydari ",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/5Iy5MX8Kh4pwRHVinUnnqP/08cae0184b2ee50545a64eb0786eac3e/Screenshot_2024-05-29_at_3.45.13_PM.png",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/7LI8Ro0LKIm4vVSblwqc5O/c7b2d5bb418dc3258156156db915d46b/Deepika-Padukone-Padmavati-Desktop-Wallpaper-26890.jpg"
+  },
+  {
+    "movieID": 101,
+    "title": "Laapataa Ladies",
+    "release_date": "2024-03-01T00:00+02:00",
+    "director": "Kiran Rao",
+    "description": "The misadventures of two young brides who get lost from the same train. From mistaken identities to laugh-out-aloud escapades, the ensuing chaos guarantees laughter galore and heartwarming moments.",
+    "genre": [
+      "Comedy",
+      "Drama"
+    ],
+    "actors": "Kiran Rao, Aamir Khan, Jyoti Deshpande",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/1klPD1ZbhUff5iXCoKTDAn/c42e169f5a71f05055ee5efa67d97334/Screenshot_2024-05-28_at_5.52.23_PM.png",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/2V8PoKt1bcEjcXV79vt0y8/e58c66b5977e5a2dec081f29d4f46a2c/1694085867_laapataa-ladies.jpg"
+  },
+  {
+    "movieID": 15,
+    "title": "Dune",
+    "release_date": "2021-10-22T00:00+02:00",
+    "director": "Denis Villeneuve",
+    "description": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet’s exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity’s greatest potential-only those who can conquer their fear will survive. ",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "actors": "Timothée Chalamet\nRebecca Ferguson\nOscar Isaac\nJason Momoa\nJosh Brolin\nStellan Skarsgård\nDave Bautista\nDavid Dastmalchian\nZendaya\nCharlotte Rampling",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/4ns3uOgLRHooNjRI4oLw9m/330946ab59b98da5fe42569a71b7ecf5/dune-1-poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/59slhbJGmQyO9atRZSiszb/ca5edd6ddee5ea16e61ca335f4420617/dune-1-background.jpg"
+  },
+  {
+    "movieID": 14,
+    "title": "Interstellar",
+    "release_date": "2014-11-06T00:00+02:00",
+    "director": " Christopher Nolan",
+    "description": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans. ",
+    "genre": [
+      "Adventure",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "actors": "Matthew McConaughey\nAnne Hathaway\nMichael Caine",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/5oOWXmOtbAcgkrdcpZk1Ux/35c298afe3f2d1f8825e9b4bd02bf93c/interstellar-poster2.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/40QGCvR2VG1uZ0SH0sdz5N/32418798716dab4961b89e92137fd0da/interstellar-background.jpg"
+  },
+  {
+    "movieID": 13,
+    "title": "Dune: Part Two",
+    "release_date": "2024-02-29T00:00+02:00",
+    "director": "Denis Villeneuve",
+    "description": "Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, he endeavors to prevent a terrible future only he can foresee. ",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "actors": "Timothée Chalamet\nZendaya\nRebecca Ferguson",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/3B6DqkfiCoiwzasguC6Aos/c223314068db78f38c4b1a91b459585d/dune-2.webp",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/5wnivaOHHoW5tV1j6UntHP/b863b055097f19aba7e3b611fa9b1f53/dune-2-background.webp"
+  },
+  {
+    "movieID": 7,
+    "title": "The Lion King",
+    "release_date": "1994-11-17T00:00+02:00",
+    "director": " Rob Minkoff",
+    "description": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself. ",
+    "genre": [
+      "Animation",
+      "Drama",
+      "Adventure"
+    ],
+    "actors": "Rowan Atkinson\nMatthew Broderick\nNiketa Calame-Harris\nJim Cummings\nWhoopi Goldberg\nRobert Guillaume\nJeremy Irons\nJames Earl Jones\nMoira Kelly\nNathan Lane",
+    "rating": 2,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/4STtW6dMMa1cLbIXGYOz4u/58caae7d4f7c341d79c887ebf9493e69/The_Lion_King_Poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/3UfcS9YrErr22i9BPZuN9f/7b38f36409fe3750740af87843274ade/The_Lion_King_Background.jpg"
+  },
+  {
+    "movieID": 788,
+    "title": "Chappie",
+    "release_date": "2015-03-05T00:00+02:00",
+    "director": "Neill Blomkamp",
+    "description": "In the near future, crime is patrolled by a mechanized police force. When one police droid, Chappie, is stolen and given new programming, he becomes the first robot with the ability to think and feel for himself. ",
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "actors": "Sharlto Copley\nDev Patel\nNinja\nYo-Landi Visser\nJose Pablo Cantillo\nHugh Jackman\nSigourney Weaver\nBrandon Auret\nJohnny Selema\nAnderson Cooper",
+    "rating": 2,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/47jfBnLkYVhUfTxM8pfFrJ/d002f6beec03bab8ba4ce48605095507/Chappie_Poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/4mDR414TPh68ljKXuL07xT/19c873a03f2788ff5328d56ed3b9f732/Chappie_Background.jpg"
+  },
+  {
+    "movieID": 666,
+    "title": "Pulp Fiction",
+    "release_date": "1994-11-03T00:00+02:00",
+    "director": " Quentin Tarantino",
+    "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption. ",
+    "genre": [
+      "Crime",
+      "Drama"
+    ],
+    "actors": "Tim Roth\nAmanda Plummer\nLaura Lovelace\nJohn Travolta\nSamuel L. Jackson\nPhil LaMarr\nFrank Whaley\nBurr Steers\nBruce Willis\nVing Rhames",
+    "rating": 5,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/4CygABVaIKruhlAVTpRgKK/3f54b1c70df5567bbe726ccc8fb0a088/Pulp_Fiction_Poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/7bFaA0GbvMrPzujNYyUBn9/6fbc405a06930235a62579a6565d92f9/Pulp_Fiction_Background.jpeg"
+  },
+  {
+    "movieID": 100,
+    "title": "3 Idiots",
+    "release_date": "2009-05-15T00:00+00:00",
+    "director": "Rajkumar Hirani",
+    "description": "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them \"idiots\".",
+    "genre": [
+      "Comedy",
+      "Drama"
+    ],
+    "actors": "Amir Khan, Sharman Joshi, Madhavan, Mona Singh, Kareena Kapoor",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/RkOMGAHf1GPTEeQVH8fC7/e88a9142a5b31b6293c010ba78d98ad6/Screenshot_2024-05-28_at_5.25.35_PM.png",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/4t70BOkWAC6cFU9GPrtClt/45cf03cd50edcd6267466f2cd7469a42/Screenshot_2024-05-28_at_5.31.51_PM.png"
+  },
+  {
+    "movieID": 10,
+    "title": "Invictus",
+    "release_date": "2009-12-11T00:00+02:00",
+    "director": "Clint Eastwood",
+    "description": "Nelson Mandela, in his first term as President of South Africa, initiates a unique venture to unite the Apartheid-torn land: enlist the national rugby team on a mission to win the 1995 Rugby World Cup. ",
+    "genre": [
+      "Biography",
+      "Drama",
+      "History"
+    ],
+    "actors": "Morgan Freeman\nMatt Damon\nTony Kgoroge\nPatrick Mofokeng\nMatt Stern\nJulian Lewis Jones\nAdjoa Andoh\nMarguerite Wheatley\nLeleti Khumalo\nPatrick Lyster",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/582NKWgzHHvQ0c791Ulw2w/d8d99b9c0e8e743d4ea9167fb16bd62c/Invictus_Poster.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/7alDz7hNuEY7bGCdtjdVbk/1744fb5a7df0f401425dbb05abfb7930/Invictus_Background.jpg"
+  },
+  {
+    "movieID": 11,
+    "title": "Furiosa: A Mad Max Saga",
+    "release_date": "2024-05-23T00:00+02:00",
+    "director": "George Miller",
+    "description": "The origin story of renegade warrior Furiosa before her encounter and teamup with Mad Max. ",
+    "genre": [
+      "Adventure",
+      "Sci-Fi",
+      "Thriller",
+      "Action"
+    ],
+    "actors": "Anya Taylor-Joy, Chris Hemsworth, Tom Burke",
+    "rating": 4,
+    "posterUrl": "//images.ctfassets.net/zpbz9458pxzp/4HaBD0SYnPoyqWWCZRmeND/9f8e0fb491f956244fbe0c207e27e3a5/madmax_furiosa.jpg",
+    "backgroundImageUrl": "//images.ctfassets.net/zpbz9458pxzp/7npPUbO6sY26jgWtpnnMsM/5f0de80cf40e21a75d817898721b1b07/furiosa-background.webp"
+  }
+]
