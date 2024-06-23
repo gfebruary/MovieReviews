@@ -1,6 +1,6 @@
 function HighlightBox() {
   return (
-    <section className="bg-neutral-900 pb-20">
+    <section className="bg-black pb-20">
       <div className="flex flex-col justify-center items-center ">
         <div>
           <h4 className="uppercase text-[12px] font-semi text-slate-400 tracking-wide pt-12 pb-2 tracking-[.15em] ">
