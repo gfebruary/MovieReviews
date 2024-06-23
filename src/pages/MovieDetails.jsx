@@ -27,6 +27,7 @@ const MovieDetails = ({ movies }) => {
   const director = movie.director;
   const genres = movie.genre;
   const cast = movie.actors;
+  const trailer = movie.video_id;
   // const castList = movie.dataactors.split("\n").map((cast, index) => (
   // const castList = movie.actors.map((cast, index) => (
   //   <li key={index} className="mb-1">
@@ -52,7 +53,8 @@ const MovieDetails = ({ movies }) => {
           backgroundImage: backgroundImageUrl
             ? `linear-gradient(to bottom, transparent, black), url(${backgroundImageUrl})`
             : "",
-        }}></div>
+        }}
+      ></div>
       <div className="mt-[25vw] flex flex-col items-center mt-4 px-4 relative">
         <div className="flex w-full max-w-4xl mx-auto">
           {posterImageUrl && (
@@ -61,7 +63,8 @@ const MovieDetails = ({ movies }) => {
               className="w-1/3 relative"
               style={{ maxWidth: "250px" }}
               onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}>
+              onMouseLeave={handleMouseLeave}
+            >
               <img
                 src={`https:${posterImageUrl}`}
                 alt="Movie Poster"
@@ -71,9 +74,10 @@ const MovieDetails = ({ movies }) => {
               {showTrailer && (
                 <iframe
                   className="absolute top-0 left-0 w-full h-[100%]"
-                  src={`https://www.youtube.com/embed/_YUzQa_1RCE?autoplay=1&mute=1&cc_load_policy=0&controls=1`}
+                  src={`https:${trailer}`}
                   frameBorder="0"
-                  allowFullScreen></iframe>
+                  allowFullScreen
+                ></iframe>
               )}
               {/* <p className="uppercase absolute bottom-0 left-0 right-0 px-2 py-24 bg-black bg-opacity-50 text-white">
                 Watch Trailer
