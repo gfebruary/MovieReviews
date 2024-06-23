@@ -1,0 +1,242 @@
+[
+  {
+    "userId": 2,
+    "movieId": 68,
+    "review": "An excellent film with a gripping storyline and fantastic acting. Definitely worth watching!",
+    "rating": 5
+  },
+  {
+    "userId": 3,
+    "movieId": 68,
+    "review": "A decent movie, but it felt a bit too long. The visuals were stunning though.",
+    "rating": 3
+  },
+  {
+    "userId": 4,
+    "movieId": 69,
+    "review": "I absolutely loved this movie! The plot twists kept me on the edge of my seat.",
+    "rating": 4
+  },
+  {
+    "userId": 5,
+    "movieId": 69,
+    "review": "A boring movie with predictable outcomes. Not my cup of tea.",
+    "rating": 2
+  },
+  {
+    "userId": 6,
+    "movieId": 70,
+    "review": "An average movie with some good moments but overall not very memorable.",
+    "rating": 3
+  },
+  {
+    "userId": 7,
+    "movieId": 70,
+    "review": "I enjoyed the movie. Great performances and a solid script.",
+    "rating": 4
+  },
+  {
+    "userId": 8,
+    "movieId": 71,
+    "review": "The best movie I've seen this year! Highly recommend to everyone.",
+    "rating": 5
+  },
+  {
+    "userId": 9,
+    "movieId": 71,
+    "review": "Not bad, but not great either. It had some good scenes.",
+    "rating": 3
+  },
+  {
+    "userId": 10,
+    "movieId": 72,
+    "review": "A well-made film with great attention to detail. Thoroughly enjoyed it.",
+    "rating": 4
+  },
+  {
+    "userId": 11,
+    "movieId": 72,
+    "review": "It was okay, but I expected more from the storyline.",
+    "rating": 3
+  },
+  {
+    "userId": 12,
+    "movieId": 73,
+    "review": "An engaging movie with an unexpected ending. Loved it!",
+    "rating": 4
+  },
+  {
+    "userId": 13,
+    "movieId": 73,
+    "review": "The plot was too complicated for my taste. Could have been better.",
+    "rating": 2
+  },
+  {
+    "userId": 14,
+    "movieId": 74,
+    "review": "A fantastic movie with brilliant performances by the cast.",
+    "rating": 5
+  },
+  {
+    "userId": 15,
+    "movieId": 74,
+    "review": "Not my favorite, but it had its moments. Decent watch.",
+    "rating": 3
+  },
+  {
+    "userId": 16,
+    "movieId": 75,
+    "review": "A touching story that really resonated with me. Highly recommend.",
+    "rating": 4
+  },
+  {
+    "userId": 17,
+    "movieId": 75,
+    "review": "An interesting movie but a bit slow in parts. Still worth a watch.",
+    "rating": 3
+  },
+  {
+    "userId": 18,
+    "movieId": 76,
+    "review": "I didn't enjoy this movie. The plot was too convoluted.",
+    "rating": 2
+  },
+  {
+    "userId": 19,
+    "movieId": 76,
+    "review": "A great film with an impressive cast. Loved every minute of it!",
+    "rating": 5
+  },
+  {
+    "userId": 20,
+    "movieId": 77,
+    "review": "An emotional rollercoaster with excellent performances. Must watch.",
+    "rating": 4
+  },
+  {
+    "userId": 21,
+    "movieId": 77,
+    "review": "It was a decent film, but not as good as I expected.",
+    "rating": 3
+  },
+  {
+    "userId": 22,
+    "movieId": 78,
+    "review": "A very well-made movie. Enjoyed the story and the acting.",
+    "rating": 4
+  },
+  {
+    "userId": 2,
+    "movieId": 78,
+    "review": "An okay movie with a few standout moments. Could have been better.",
+    "rating": 3
+  },
+  {
+    "userId": 3,
+    "movieId": 79,
+    "review": "An exciting film with great action scenes. Thoroughly enjoyed it.",
+    "rating": 4
+  },
+  {
+    "userId": 4,
+    "movieId": 79,
+    "review": "The movie was too slow for my liking. Not enough action.",
+    "rating": 2
+  },
+  {
+    "userId": 5,
+    "movieId": 80,
+    "review": "A masterpiece! The best film I've seen in a long time.",
+    "rating": 5
+  },
+  {
+    "userId": 6,
+    "movieId": 80,
+    "review": "An average film with a few good moments. Not very memorable.",
+    "rating": 3
+  },
+  {
+    "userId": 7,
+    "movieId": 81,
+    "review": "An engaging film with a fantastic storyline and great performances.",
+    "rating": 4
+  },
+  {
+    "userId": 8,
+    "movieId": 81,
+    "review": "I didn't like the movie. The plot was too predictable.",
+    "rating": 2
+  },
+  {
+    "userId": 9,
+    "movieId": 82,
+    "review": "A wonderful movie with a touching story. Highly recommend.",
+    "rating": 5
+  },
+  {
+    "userId": 10,
+    "movieId": 82,
+    "review": "A decent film but nothing special. It was just okay.",
+    "rating": 3
+  },
+  {
+    "userId": 11,
+    "movieId": 83,
+    "review": "An impressive movie with great acting and a compelling story.",
+    "rating": 4
+  },
+  {
+    "userId": 12,
+    "movieId": 83,
+    "review": "I didn't enjoy the movie. The plot was too slow and boring.",
+    "rating": 2
+  },
+  {
+    "userId": 13,
+    "movieId": 84,
+    "review": "A fantastic movie with a gripping plot and excellent performances.",
+    "rating": 5
+  },
+  {
+    "userId": 14,
+    "movieId": 84,
+    "review": "An average film with some good moments. Not very memorable.",
+    "rating": 3
+  },
+  {
+    "userId": 15,
+    "movieId": 85,
+    "review": "A very well-made film with great attention to detail. Loved it.",
+    "rating": 4
+  },
+  {
+    "userId": 16,
+    "movieId": 85,
+    "review": "It was okay, but I expected more from the storyline.",
+    "rating": 3
+  },
+  {
+    "userId": 17,
+    "movieId": 86,
+    "review": "An engaging film with an unexpected ending. Highly recommend.",
+    "rating": 4
+  },
+  {
+    "userId": 18,
+    "movieId": 86,
+    "review": "The plot was too complicated for my taste. Could have been better.",
+    "rating": 2
+  },
+  {
+    "userId": 19,
+    "movieId": 87,
+    "review": "A fantastic film with brilliant performances by the cast.",
+    "rating": 5
+  },
+  {
+    "userId": 20,
+    "movieId": 87,
+    "review": "Not my favorite, but it had its moments. Decent watch.",
+    "rating": 3
+  }
+]

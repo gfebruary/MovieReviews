@@ -22,6 +22,24 @@ app.get("/api/v1/movies", async (req, res) => {
   }
 });
 
+app.get("/api/v1/users", async (req, res) => {
+  try {
+    const users = await sql`SELECT * FROM users`;
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get("/api/v1/reviews", async (req, res) => {
+  try {
+    const reviews = await sql`SELECT * FROM reviews`;
+    res.status(200).json(reviews);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 app.get("/api/v1/movies/:video_id", async (req, res) => {
   const { video_id } = req.params;
   try {
@@ -58,6 +76,50 @@ app.post("/api/v1/movies", async (req, res) => {
       `;
     }
     res.status(201).json({ message: "Movies inserted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// POST endpoint to insert users from JSON file into database
+app.post("/api/v1/users", async (req, res) => {
+  try {
+    // Read movies.json file
+    const rawData = await fs.readFile("../src/users.json");
+    const users = JSON.parse(rawData);
+
+    // Insert each movie into the database
+    for (const user of users) {
+      await sql`
+        INSERT INTO users (
+          username, location) VALUES (
+          ${user.userName}, ${user.location}
+        )
+      `;
+    }
+    res.status(201).json({ message: "Users inserted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// POST endpoint to insert reviews from JSON file into database
+app.post("/api/v1/reviews", async (req, res) => {
+  try {
+    // Read reviews.json file
+    const rawData = await fs.readFile("../src/reviews.json");
+    const reviews = JSON.parse(rawData);
+
+    // Insert each movie into the database
+    for (const review of reviews) {
+      await sql`
+        INSERT INTO reviews (
+          movie_id, user_id, review_text, rating) VALUES (
+          ${review.movieId}, ${review.userId}, ${review.review}, ${review.rating}
+        )
+      `;
+    }
+    res.status(201).json({ message: "Reviews inserted successfully" });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

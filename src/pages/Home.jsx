@@ -1,28 +1,15 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import HighlightBox from "../components/HighlightBox";
 import MainListSection from "../components/MainListSection";
 
 function Home({ movies }) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error loading movies: {error.message}</div>;
+  if (!movies || movies.length === 0) {
+    return <div>No movies available</div>;
   }
 
   const randomIndex = Math.floor(Math.random() * movies.length);
   const randomMovie = movies[randomIndex];
-  const backgroundImageUrl =
-    randomMovie?.fields?.backgroundImage?.fields?.file?.url;
+  const backgroundImageUrl = randomMovie?.backgroundimageurl;
 
   const getRandomMovies = (count) => {
     const shuffledMovies = [...movies];
@@ -44,7 +31,7 @@ function Home({ movies }) {
         className="relative w-2/3 min-h-96 bg-cover bg-top mx-auto"
         style={{
           backgroundImage: backgroundImageUrl
-            ? `linear-gradient(to bottom, transparent, black), url(https:${backgroundImageUrl})`
+            ? `linear-gradient(to bottom, transparent, black), url(${backgroundImageUrl})`
             : "",
         }}></div>
       <div className="main-selling-point text-center">
@@ -66,14 +53,14 @@ function Home({ movies }) {
       <div className="flex-grow flex justify-center mt-8">
         <div className="flex flex-wrap justify-center max-w-screen-lg">
           {randomMovies.map((movie, index) => {
-            const coverImageUrl = movie?.fields?.poster?.fields?.file?.url;
+            const coverImageUrl = movie.posterurl;
             console.log(`Movie ${index + 1}:`, movie);
             return (
               <div key={index} className="p-3">
                 {coverImageUrl ? (
-                  <Link to={`/movies/${movie.sys.id}`}>
+                  <Link to={`/movies/${movie.id}`}>
                     <img
-                      src={`https:${coverImageUrl}`}
+                      src={coverImageUrl}
                       alt={`Movie Cover ${index + 1}`}
                       className="h-48 w-auto"
                       style={{
