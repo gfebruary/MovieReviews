@@ -3,13 +3,9 @@ import MainListSection from "../components/MainListSection";
 
 const Films = () => {
   return (
-    <>
-      <br />
-      <br />
-
-      <br />
+    <div className="mt-[150px]">
       <MainListSection />
-    </>
+    </div>
   );
 };
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import MainListSection from "../components/MainListSection";
 
 const MovieDetails = ({ movies }) => {
   const { movieId } = useParams();
   const [showTrailer, setShowTrailer] = useState(false);
 
-  // this useEffect ensures, that the page scrolls upwards as soon as the component is rendered
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [movieId]);
@@ -28,14 +28,6 @@ const MovieDetails = ({ movies }) => {
   const genres = movie.genre;
   const cast = movie.actors;
   const trailer = movie.video_id;
-  // const castList = movie.dataactors.split("\n").map((cast, index) => (
-  // const castList = movie.actors.map((cast, index) => (
-  //   <li key={index} className="mb-1">
-  //     {cast}
-  //   </li>
-  // ));
-
-  // const trailerUrl = movie?.fields?.trailer?.fields?.file?.details?.url;
 
   const handleMouseEnter = () => {
     setShowTrailer(true);
@@ -44,6 +36,9 @@ const MovieDetails = ({ movies }) => {
   const handleMouseLeave = () => {
     setShowTrailer(false);
   };
+
+  // Split the cast string into an array of actors
+  const actorsArray = cast.split(",").map((actor) => actor.trim());
 
   return (
     <div className="flex flex-col h-full mb-[300px] pb-20">
@@ -58,7 +53,6 @@ const MovieDetails = ({ movies }) => {
       <div className="mt-[25vw] flex flex-col items-center mt-4 px-4 relative">
         <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-5xl mx-auto">
           {posterImageUrl && (
-            // trailer is played when hovering over poster
             <div
               className="w-full md:w-1/2 relative mb-4 md:mb-0 "
               style={{ maxWidth: "350px" }}
@@ -79,9 +73,6 @@ const MovieDetails = ({ movies }) => {
                   allowFullScreen
                 ></iframe>
               )}
-              {/* <p className="uppercase absolute bottom-0 left-0 right-0 px-2 py-24 bg-black bg-opacity-50 text-white">
-                Watch Trailer
-              </p> */}
             </div>
           )}
           <div className="w-full md:w-1/2 md:pl-8">
@@ -93,11 +84,24 @@ const MovieDetails = ({ movies }) => {
             <p className="text-lg mb-4">{description}</p>
             <div style={{ marginBottom: "3rem" }}>
               <h2 className="text-2xl font-bold mb-2">Cast</h2>
-              <p className="text-lg mb-4">{cast}</p>
-              {/* <ul className="list-none pl-0">{castList}</ul> */}
+              <ul className="list-none pl-0 grid gap-1 grid-cols-3 grid-rows-3">
+                {actorsArray.map((actor, index) => (
+                  <li key={index} className="mb-2">
+                    <a
+                      href={`/actors/${actor}`}
+                      className=" px-2 py-1 bg-slate-700 rounded cursor-pointer border-[3px] border-green-600 border-opacity-0 hover:border-opacity-100 rounded inline-block text-[13px] font-semi text-slate-400 tracking-wide"
+                    >
+                      {actor}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
+      </div>
+      <div className="mt-[100px]">
+        <MainListSection />
       </div>
     </div>
   );

@@ -40,6 +40,19 @@ app.get("/api/v1/reviews", async (req, res) => {
   }
 });
 
+app.get("/api/v1/reviews/:movie_id", async (req, res) => {
+  const { movie_id } = req.params;
+  try {
+    const movie = await sql`SELECT * FROM reviews WHERE movie_id = ${movie_id}`;
+    if (movie.length === 0) {
+      return res.status(404).json({ error: "Reviews not found" });
+    }
+    res.status(200).json(movie[0]);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 app.get("/api/v1/movies/:video_id", async (req, res) => {
   const { video_id } = req.params;
   try {
