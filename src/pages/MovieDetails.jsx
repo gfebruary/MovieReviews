@@ -46,7 +46,7 @@ const MovieDetails = ({ movies }) => {
   };
 
   return (
-    <div className="flex flex-col h-screen mb-[300px] pb-20">
+    <div className="flex flex-col h-full mb-[300px] pb-20">
       <div
         className="absolute w-full h-1/2 bg-cover bg-top mx-auto"
         style={{
@@ -56,12 +56,12 @@ const MovieDetails = ({ movies }) => {
         }}
       ></div>
       <div className="mt-[25vw] flex flex-col items-center mt-4 px-4 relative">
-        <div className="flex w-full max-w-4xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-5xl mx-auto">
           {posterImageUrl && (
             // trailer is played when hovering over poster
             <div
-              className="w-1/3 relative"
-              style={{ maxWidth: "250px" }}
+              className="w-full md:w-1/2 relative mb-4 md:mb-0 "
+              style={{ maxWidth: "350px" }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -73,7 +73,7 @@ const MovieDetails = ({ movies }) => {
               />
               {showTrailer && (
                 <iframe
-                  className="absolute top-0 left-0 w-full h-[100%]"
+                  className="absolute top-0 left-0 w-full h-full"
                   src={`https:${trailer}`}
                   frameBorder="0"
                   allowFullScreen
@@ -84,7 +84,7 @@ const MovieDetails = ({ movies }) => {
               </p> */}
             </div>
           )}
-          <div className="w-2/3 pl-6">
+          <div className="w-full md:w-1/2 md:pl-8">
             <h1 className="text-4xl font-bold mb-2">{movie.title}</h1>
             <p className="text-lg text-gray-500 mb-4">
               {releaseYear} &bull; Directed by {director}
