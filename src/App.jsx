@@ -26,10 +26,11 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [users, setUsers] = useState([]);
   const [reviews, setReviews] = useState([]);
-
+  // const hostLocation = "http://localhost:8000";
+  const hostLocation = "https://moviereview-team1.netlify.app";
   useEffect(() => {
     const fetchMovieData = async () => {
-      const fetchedMovies = await fetch("http://localhost:8000/api/v1/movies");
+      const fetchedMovies = await fetch(`${hostLocation}/api/v1/movies`);
       const data = await fetchedMovies.json();
       setMovies(data);
       // client.getEntries({
@@ -45,7 +46,7 @@ function App() {
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const fetchedUsers = await fetch("http://localhost:8000/api/v1/users");
+      const fetchedUsers = await fetch(`${hostLocation}/api/v1/users`);
       const userData = await fetchedUsers.json();
       setUsers(userData);
     };
@@ -57,9 +58,7 @@ function App() {
 
   useEffect(() => {
     const fetchReviewData = async () => {
-      const fetchedReviews = await fetch(
-        "http://localhost:8000/api/v1/reviews"
-      );
+      const fetchedReviews = await fetch(`${hostLocation}/api/v1/reviews`);
       const reviewData = await fetchedReviews.json();
       setReviews(reviewData);
     };

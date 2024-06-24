@@ -10,10 +10,12 @@ import { Link } from "react-router-dom";
 //   accessToken: accessToken,
 // });
 //---------------------
+// const hostLocation = "http://localhost:8000";
+const hostLocation = "https://moviereview-team1.netlify.app";
 
 const fetchMoviesFromBackend = async () => {
   try {
-    const response = await fetch("http://localhost:8000/api/v1/movies");
+    const response = await fetch(`${hostLocation}/api/v1/movies`);
     if (!response.ok) {
       throw new Error("Failed to fetch movies");
     }
@@ -50,8 +52,7 @@ function MainListSection() {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="green"
-        className="size-5"
-      >
+        className="size-5">
         <path
           fillRule="evenodd"
           d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
@@ -188,8 +189,7 @@ function MainListSection() {
                 {sortedGenres.map((genre, index) => (
                   <li
                     className="w-[70px] flex items-center justify-center pt-2 bg-slate-700 rounded cursor-pointer border-[3px] border-green-600 border-opacity-0 hover:border-opacity-100"
-                    key={index}
-                  >
+                    key={index}>
                     <div className="flow-root">
                       <div className="text-[12px] font-semi text-slate-400 tracking-wide pb-2 tracking-[.15em] ">
                         {genre}
@@ -219,8 +219,7 @@ function MainListSection() {
                   .map((rating, index) => (
                     <li
                       className="w-[70px] flex items-center justify-center pt-2 pr-4 bg-slate-700 rounded cursor-pointer border-[3px] border-green-600 border-opacity-0 hover:border-opacity-100"
-                      key={index}
-                    >
+                      key={index}>
                       <div className="flow-root">
                         <div className="text-[12px] font-semi text-slate-400 tracking-wide pb-2 tracking-[.15em] ">
                           {rating}
@@ -228,8 +227,7 @@ function MainListSection() {
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="green"
-                            className="size-5 -mt-5 ml-8"
-                          >
+                            className="size-5 -mt-5 ml-8">
                             <path
                               fillRule="evenodd"
                               d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
