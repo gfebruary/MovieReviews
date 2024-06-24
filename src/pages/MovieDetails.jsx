@@ -48,8 +48,7 @@ const MovieDetails = ({ movies }) => {
           backgroundImage: backgroundImageUrl
             ? `linear-gradient(to bottom, transparent, black), url(${backgroundImageUrl})`
             : "",
-        }}
-      ></div>
+        }}></div>
       <div className="mt-[25vw] flex flex-col items-center mt-4 px-4 relative">
         <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-5xl mx-auto">
           {posterImageUrl && (
@@ -57,8 +56,7 @@ const MovieDetails = ({ movies }) => {
               className="w-full md:w-1/2 relative mb-4 md:mb-0 "
               style={{ maxWidth: "350px" }}
               onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
+              onMouseLeave={handleMouseLeave}>
               <img
                 src={`https:${posterImageUrl}`}
                 alt="Movie Poster"
@@ -70,8 +68,7 @@ const MovieDetails = ({ movies }) => {
                   className="absolute top-0 left-0 w-full h-full"
                   src={`https:${trailer}`}
                   frameBorder="0"
-                  allowFullScreen
-                ></iframe>
+                  allowFullScreen></iframe>
               )}
             </div>
           )}
@@ -89,8 +86,7 @@ const MovieDetails = ({ movies }) => {
                   <li key={index} className="mb-2">
                     <a
                       href={`/actors/${actor}`}
-                      className=" px-2 py-1 bg-slate-700 rounded cursor-pointer border-[3px] border-green-600 border-opacity-0 hover:border-opacity-100 rounded inline-block text-[13px] font-semi text-slate-400 tracking-wide"
-                    >
+                      className=" px-2 py-1 bg-slate-700 rounded cursor-pointer border-[3px] border-green-600 border-opacity-0 hover:border-opacity-100 rounded inline-block text-[13px] font-semi text-slate-400 tracking-wide">
                       {actor}
                     </a>
                   </li>

@@ -25,6 +25,7 @@ import "./App.css";
 function App() {
   const [movies, setMovies] = useState([]);
   const [users, setUsers] = useState([]);
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     const fetchMovieData = async () => {
@@ -40,6 +41,8 @@ function App() {
     fetchMovieData();
   }, []);
 
+  //----------------------users
+
   useEffect(() => {
     const fetchUserData = async () => {
       const fetchedUsers = await fetch("http://localhost:8000/api/v1/users");
@@ -49,6 +52,31 @@ function App() {
 
     fetchUserData();
   }, []);
+
+  //----------------------reviews
+
+  useEffect(() => {
+    const fetchReviewData = async () => {
+      const fetchedReviews = await fetch(
+        "http://localhost:8000/api/v1/reviews"
+      );
+      const reviewData = await fetchedReviews.json();
+      setReviews(reviewData);
+    };
+
+    fetchReviewData();
+  }, []);
+
+  //----------------------combined
+  const usersWithReviews = users.map((user) => ({
+    ...user,
+    reviews: reviews
+      .filter((review) => review.user_id === user.userid)
+      .map((review) => ({
+        ...review,
+        movie: movies.find((movie) => movie.id === review.movie_id) || {},
+      })),
+  }));
 
   return (
     <BrowserRouter>
@@ -63,7 +91,8 @@ function App() {
         <Route path="create-account" element={<CreateAccount />} />
         <Route path="films" element={<Films />} />
         <Route path="lists" element={<Lists />} />
-        <Route path="members" element={<Members users={users} />} />
+        {/* <Route path="members" element={<Members users={users} />} /> */}
+        <Route path="members" element={<Members users={usersWithReviews} />} />
         <Route path="journal" element={<Journal />} />
       </Routes>
       <Footer />
