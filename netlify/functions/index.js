@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import sql from "./db.js";
 import fs from "fs/promises";
+import serverless from "serverless-http";
 
 const app = express();
 const port = 8000;
