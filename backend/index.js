@@ -8,6 +8,7 @@ const port = 8000;
 
 app.use(express.json());
 app.use(cors({ origin: "*" }));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.get("/", (req, res) => {
   res.send("Hello movie fans!");
