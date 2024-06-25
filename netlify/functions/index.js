@@ -1,15 +1,15 @@
 import express from "express";
 import cors from "cors";
 import sql from "./db.js";
-import fs from "fs/promises";
+// import fs from "fs/promises";
 import serverless from "serverless-http";
 
 const app = express();
 const port = 8000;
 
 app.use(express.json());
-app.use(cors({ origin: "*" }));
-app.use(express.static(path.join(__dirname, "build")));
+// app.use(cors({ origin: "*" }));
+// app.use(express.static(path.join(__dirname, "build")));
 
 app.get("/", (req, res) => {
   res.send("Hello movie fans!");
@@ -69,83 +69,83 @@ app.get("/api/v1/movies/:video_id", async (req, res) => {
   }
 });
 
-// POST endpoint to insert movies from JSON file into database
-// command in terminal: curl -X POST http://localhost:8000/api/v1/movies
-app.post("/api/v1/movies", async (req, res) => {
-  try {
-    // Read movies.json file
-    const rawData = await fs.readFile("../src/movies.json");
-    const movies = JSON.parse(rawData);
+// // POST endpoint to insert movies from JSON file into database
+// // command in terminal: curl -X POST http://localhost:8000/api/v1/movies
+// app.post("/api/v1/movies", async (req, res) => {
+//   try {
+//     // Read movies.json file
+//     const rawData = await fs.readFile("../src/movies.json");
+//     const movies = JSON.parse(rawData);
 
-    // Insert each movie into the database
-    for (const movie of movies) {
-      await sql`
-        INSERT INTO movies (
-          movieID, title, release_date, director, description, genre,
-          actors, rating, posterUrl, backgroundImageUrl
-        ) VALUES (
-          ${movie.movieID}, ${movie.title}, ${movie.release_date},
-          ${movie.director}, ${movie.description}, ${movie.genre}, ${movie.actors},
-          ${movie.rating}, ${movie.posterUrl}, ${movie.backgroundImageUrl}
-        )
-      `;
-    }
-    res.status(201).json({ message: "Movies inserted successfully" });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+//     // Insert each movie into the database
+//     for (const movie of movies) {
+//       await sql`
+//         INSERT INTO movies (
+//           movieID, title, release_date, director, description, genre,
+//           actors, rating, posterUrl, backgroundImageUrl
+//         ) VALUES (
+//           ${movie.movieID}, ${movie.title}, ${movie.release_date},
+//           ${movie.director}, ${movie.description}, ${movie.genre}, ${movie.actors},
+//           ${movie.rating}, ${movie.posterUrl}, ${movie.backgroundImageUrl}
+//         )
+//       `;
+//     }
+//     res.status(201).json({ message: "Movies inserted successfully" });
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// });
 
-// POST endpoint to insert users from JSON file into database
-app.post("/api/v1/users", async (req, res) => {
-  try {
-    // Read movies.json file
-    // const rawData = await fs.readFile("../src/users.json");
-    const users = JSON.parse(rawData);
+// // POST endpoint to insert users from JSON file into database
+// app.post("/api/v1/users", async (req, res) => {
+//   try {
+//     // Read movies.json file
+//     // const rawData = await fs.readFile("../src/users.json");
+//     const users = JSON.parse(rawData);
 
-    // Insert each movie into the database
-    for (const user of users) {
-      await sql`
-        INSERT INTO users (
-          username, location) VALUES (
-          ${user.userName}, ${user.location}
-        )
-      `;
-    }
-    res.status(201).json({ message: "Users inserted successfully" });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+//     // Insert each movie into the database
+//     for (const user of users) {
+//       await sql`
+//         INSERT INTO users (
+//           username, location) VALUES (
+//           ${user.userName}, ${user.location}
+//         )
+//       `;
+//     }
+//     res.status(201).json({ message: "Users inserted successfully" });
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// });
 
-// POST endpoint to insert reviews from JSON file into database
-app.post("/api/v1/reviews", async (req, res) => {
-  try {
-    // Read reviews.json file
-    // const rawData = await fs.readFile("../src/reviews.json");
-    const reviews = JSON.parse(rawData);
+// // POST endpoint to insert reviews from JSON file into database
+// app.post("/api/v1/reviews", async (req, res) => {
+//   try {
+//     // Read reviews.json file
+//     // const rawData = await fs.readFile("../src/reviews.json");
+//     const reviews = JSON.parse(rawData);
 
-    // Insert each movie into the database
-    for (const review of reviews) {
-      await sql`
-        INSERT INTO reviews (
-          movie_id, user_id, review_text, rating) VALUES (
-          ${review.movieId}, ${review.userId}, ${review.review}, ${review.rating}
-        )
-      `;
-    }
-    res.status(201).json({ message: "Reviews inserted successfully" });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+//     // Insert each movie into the database
+//     for (const review of reviews) {
+//       await sql`
+//         INSERT INTO reviews (
+//           movie_id, user_id, review_text, rating) VALUES (
+//           ${review.movieId}, ${review.userId}, ${review.review}, ${review.rating}
+//         )
+//       `;
+//     }
+//     res.status(201).json({ message: "Reviews inserted successfully" });
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// });
 
 // app.listen(port, () => {
 //   console.log(`Server is running on port ${port}`);
 // });
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../../build", "index.html"));
+// });
 
 module.exports = app;
 module.exports.handler = serverless(app);
