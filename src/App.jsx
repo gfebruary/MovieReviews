@@ -84,7 +84,7 @@ function App() {
         <Route path="/" element={<Home movies={movies} />} />
         <Route
           path="/movies/:movieId"
-          element={<MovieDetails movies={movies} />}
+          element={<MovieDetails movies={movies} reviews={reviews} />}
         />
         <Route path="signin" element={<SignIn />} />
         <Route path="create-account" element={<CreateAccount />} />
