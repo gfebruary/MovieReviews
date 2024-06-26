@@ -1,8 +1,11 @@
 import React from "react";
+import MainListSection from "../components/MainListSection";
 
 const Films = () => {
   return (
-    <div className="pt-16">HERE WILL BE POSSIBLY A LIST OF ALL THE FILMS</div>
+    <div className="mt-[150px]">
+      <MainListSection />
+    </div>
   );
 };
 
