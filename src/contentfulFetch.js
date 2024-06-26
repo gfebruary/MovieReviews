@@ -3,8 +3,8 @@ const { createClient } = pkg;
 import fs from "fs";
 
 const client = createClient({
-  space: "zpbz9458pxzp",
-  accessToken: "aC6qiLCHz13DT9K6T_Of1auU2GSIqLzBelz9gyNO02A",
+  space: "",
+  accessToken: "",
 });
 
 async function fetchData() {
