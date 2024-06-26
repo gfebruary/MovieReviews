@@ -50,7 +50,7 @@ const MovieDetails = ({ movies }) => {
             : "",
         }}></div>
       <div className="mt-[25vw] flex flex-col items-center mt-4 px-4 relative">
-        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-5xl mx-auto">
+        <div className=" flex flex-col md:flex-row items-center justify-center w-full max-w-5xl mx-auto">
           {posterImageUrl && (
             <div
               className="w-full md:w-1/2 relative mb-4 md:mb-0 "

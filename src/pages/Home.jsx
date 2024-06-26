@@ -29,7 +29,7 @@ function Home({ movies }) {
   return (
     <div className="flex flex-col min-h-screen">
       <div
-        className="relative w-2/3 min-h-96 bg-cover bg-top mx-auto"
+        className=" relative w-full sm:w-2/3 min-h-96 bg-cover bg-top mx-auto"
         style={{
           backgroundImage: backgroundImageUrl
             ? `linear-gradient(to bottom, transparent, black), url(${backgroundImageUrl})`

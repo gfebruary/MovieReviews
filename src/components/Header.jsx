@@ -1,9 +1,11 @@
+// Header.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 function Header() {
   const [showPopup, setShowPopup] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
@@ -13,48 +15,119 @@ function Header() {
     setShowPopup(false);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="absolute top-0 left-0 w-full bg-gradient-to-b from-black to-transparent p-4 z-10">
-      <nav className="flex justify-center items-center space-x-6">
+      <nav className="flex justify-between items-center">
         <Link to="/">
           <img src={logo} alt="My App Logo" className="h-8" />
         </Link>
-        <button
-          onClick={togglePopup}
-          className="text-white uppercase hover:text-orange-500 transition duration-300">
-          Sign In
-        </button>
-        <Link
-          to="/create-account"
-          className="text-white uppercase hover:text-orange-500 transition duration-300">
-          Create Account
-        </Link>
-        <Link
-          to="/films"
-          className="text-white uppercase hover:text-orange-500 transition duration-300">
-          Films
-        </Link>
-        <Link
-          to="/lists"
-          className="text-white uppercase hover:text-orange-500 transition duration-300">
-          Lists
-        </Link>
-        <Link
-          to="/members"
-          className="text-white uppercase hover:text-orange-500 transition duration-300">
-          Members
-        </Link>
-        <Link
-          to="/journal"
-          className="text-white uppercase hover:text-orange-500 transition duration-300">
-          Journal
-        </Link>
-        <input
-          type="text"
-          placeholder="Search"
-          className="px-2 py-1 rounded-full text-black"
-        />
+        <div className="hidden md:flex space-x-6">
+          <Link
+            to="/signin"
+            className="text-white uppercase hover:text-orange-500 transition duration-300">
+            Sign In
+          </Link>
+          <Link
+            to="/create-account"
+            className="text-white uppercase hover:text-orange-500 transition duration-300">
+            Create Account
+          </Link>
+          <Link
+            to="/films"
+            className="text-white uppercase hover:text-orange-500 transition duration-300">
+            Films
+          </Link>
+          <Link
+            to="/lists"
+            className="text-white uppercase hover:text-orange-500 transition duration-300">
+            Lists
+          </Link>
+          <Link
+            to="/members"
+            className="text-white uppercase hover:text-orange-500 transition duration-300">
+            Members
+          </Link>
+          <Link
+            to="/journal"
+            className="text-white uppercase hover:text-orange-500 transition duration-300">
+            Journal
+          </Link>
+          <input
+            type="text"
+            placeholder="Search"
+            className="px-2 py-1 rounded-full text-black"
+          />
+        </div>
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={toggleMenu}
+            className="text-white focus:outline-none">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
+
+      {isMenuOpen && (
+        <div className="md:hidden flex flex-col items-center bg-gray-800 w-full p-4 space-y-4">
+          <Link
+            to="/signin"
+            className="text-white uppercase hover:text-orange-500 transition duration-300"
+            onClick={toggleMenu}>
+            Sign In
+          </Link>
+          <Link
+            to="/create-account"
+            className="text-white uppercase hover:text-orange-500 transition duration-300"
+            onClick={toggleMenu}>
+            Create Account
+          </Link>
+          <Link
+            to="/films"
+            className="text-white uppercase hover:text-orange-500 transition duration-300"
+            onClick={toggleMenu}>
+            Films
+          </Link>
+          <Link
+            to="/lists"
+            className="text-white uppercase hover:text-orange-500 transition duration-300"
+            onClick={toggleMenu}>
+            Lists
+          </Link>
+          <Link
+            to="/members"
+            className="text-white uppercase hover:text-orange-500 transition duration-300"
+            onClick={toggleMenu}>
+            Members
+          </Link>
+          <Link
+            to="/journal"
+            className="text-white uppercase hover:text-orange-500 transition duration-300"
+            onClick={toggleMenu}>
+            Journal
+          </Link>
+          <input
+            type="text"
+            placeholder="Search"
+            className="px-2 py-1 rounded-full text-black"
+          />
+        </div>
+      )}
 
       {showPopup && (
         <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 flex justify-center items-center">
