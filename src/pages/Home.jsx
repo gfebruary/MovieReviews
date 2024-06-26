@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import HighlightBox from "../components/HighlightBox";
 import MainListSection from "../components/MainListSection";
+import Spinner from "../components/Spinner";
 
 function Home({ movies }) {
   if (!movies || movies.length === 0) {
-    return <div>No movies available</div>;
+    return <Spinner />;
   }
 
   const randomIndex = Math.floor(Math.random() * movies.length);
