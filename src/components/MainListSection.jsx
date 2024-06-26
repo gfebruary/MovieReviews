@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 //   accessToken: accessToken,
 // });
 //---------------------
-const hostLocation = "http://localhost:8000";
-// const hostLocation = "https://moviereview-team1.netlify.app";
+// const hostLocation = "http://localhost:8000";
+ const hostLocation = "https://moviereviews-l2ul.onrender.com";
 
 const fetchMoviesFromBackend = async () => {
   try {

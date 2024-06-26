@@ -26,8 +26,8 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [users, setUsers] = useState([]);
   const [reviews, setReviews] = useState([]);
-  const hostLocation = "http://localhost:8000";
-  // const hostLocation = "/.netlify/functions/server";
+  // const hostLocation = "http://localhost:8000";
+   const hostLocation = "https://moviereviews-l2ul.onrender.com";
   useEffect(() => {
     const fetchMovieData = async () => {
       const fetchedMovies = await fetch(`${hostLocation}/api/v1/movies`);
